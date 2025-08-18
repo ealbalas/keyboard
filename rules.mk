@@ -12,7 +12,7 @@ RGB_MATRIX_ENABLE = yes # Enable per-key RGB effects (bigger firmware size)
 
 # Advanced features
 TAP_DANCE_ENABLE = no  # Enable tap dance (multi-tap/hold actions)
-COMBO_ENABLE = no      # Enable key combos (chording)
+COMBO_ENABLE = yes      # Enable key combos (chording)
 TRI_LAYER_ENABLE = no  # Enable tri-layer (e.g. Lower+Raise=Adjust)
 CAPS_WORD_ENABLE = no  # Enable Caps Word (automatic caps mode)
 
