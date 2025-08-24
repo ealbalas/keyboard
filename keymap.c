@@ -8,8 +8,6 @@ enum custom_layers {
      _SYMBOLS,
      _NUMPAD,
      _FUNCTIONS,
-     // _LOWER,
-     // _RAISE
 };
 
 enum combo_events {
@@ -31,9 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LCTL,      KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
   //├────────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     MO(_NUMPAD), KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LALT,          KC_DEL,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, MO(_SYMBOLS),
+     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LALT,          KC_DEL,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
   //└────────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                             KC_LSFT, MT(MOD_LGUI, KC_ESC), MT(MOD_LCTL,KC_ENT),       MT(MOD_RCTL,KC_BSPC),  MT(MOD_RALT,KC_SPC), KC_RSFT
+                             MO(_NUMPAD), MT(MOD_LGUI, KC_ESC), MT(MOD_LCTL,KC_ENT),       MT(MOD_RCTL,KC_BSPC),  MT(MOD_RALT,KC_SPC), MO(_SYMBOLS)
                          // └────────┴────────────────────┴───────────────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -71,9 +69,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, KC_F1,   KC_F4,   KC_F7,   KC_F10, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     EE_CLR,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, KC_F2,   KC_F5,   KC_F8,   KC_F11, XXXXXXX,
+     EE_CLR,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, KC_F2,   KC_F5,   KC_F8,   KC_F11, LGUI(LSFT(KC_3)),
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, KC_F3,   KC_F6,   KC_F9,   KC_F12, XXXXXXX,
+     QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, KC_F3,   KC_F6,   KC_F9,   KC_F12, LGUI(LSFT(KC_4)),
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX,  XXXXXXX,XXXXXXX
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
